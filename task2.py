@@ -3,7 +3,8 @@ items = {
     "Shoes": {"size": 38, "color": "Brown", "price": 5000},
     "Headphones": {"color": "Silver", "brand": "JBL", "price": 10000},
     "Laptop": {"color": "Black", "brand": "Samsung", "price": 30000},
-    "Bag": {"color": "Blue", "brand": "Gucci", "price": 1000}
+    "Bag": {"color": "Blue", "brand": "Gucci", "price": 1000},
+    "mobile phone": {"color": "rainbow", "brand":"Itel", "price": 15000}
 }
 
 # Discount rate
@@ -12,7 +13,7 @@ discount_rate = 0.20
 # Initializing variables
 total_price = 0
 
-def add_to_cart(item_name, quantity):
+def add_to_cart(item_name, quantity, *args, **kwargs):
     """Add the selected item to the cart with discount applied."""
     if item_name in items:
         price = items[item_name]["price"]
